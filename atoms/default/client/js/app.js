@@ -131,7 +131,6 @@ function makeMap(states, places, boundary) {
 	        .attr("height", raster_height)
 	        .attr("transform", "translate(" + rtranslate_x + ", " + rtranslate_y + ")");        
 
-
 	    svg.append("g")
 		    .selectAll("path")
 		    .data(topojson.feature(states,states.objects.states).features)
@@ -141,20 +140,7 @@ function makeMap(states, places, boundary) {
 		        .attr("fill", "none")
 		        .attr("stroke", "#bcbcbc")
 		        .attr("data-tooltip","")
-		        .attr("d", path);    
-
-		        /*
-		svg.append("g")
-		    .selectAll("path")
-		    .data(topojson.feature(rivers,rivers.objects.mdb_main_rivers).features)
-		    .enter().append("path")
-		        .attr("class", "sa2")
-		        .attr("fill", "none")
-		        .attr("stroke", "#aad8f1")
-		        .style("opacity",0.7)
-		        .attr("stroke-width", 2)
-		        .attr("data-tooltip","")
-		        .attr("d", path);   */       
+		        .attr("d", path);      
 
 			svg.append("g")
 		    .selectAll("path")
