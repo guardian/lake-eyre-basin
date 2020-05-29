@@ -20,3 +20,15 @@ setTimeout(() => {
   window.resize()
   }
 },100)
+
+
+
+if (window.frameElement) {
+ 
+   window.frameElement.height = document.body.offsetHeight + 150
+
+   onElementHeightChange(document.body, function() {
+       window.frameElement.height = document.body.offsetHeight + 150
+   });
+
+}
